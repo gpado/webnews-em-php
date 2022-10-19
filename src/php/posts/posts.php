@@ -77,10 +77,10 @@
                 if($sql->execute()){
                     return true;
                 }else{
-                    return "Error unknow to submit a new post";
+                    return "Error to submit a new post: Execution failed";
                 }
             }catch(PDO_Exception $error){
-                return "Error to submit a new post: $error";
+                return "Error to submit a new post: ".$error->getMessage();
             }
         }
 
@@ -102,16 +102,38 @@
                     if($sql->execute()){
                         return $sql->fetchAll();
                     }else{
-                        return "Error to consult posts: Execution vailed";
+                        return "Error to consult posts: Execution failed";
                     }
 
                 }catch(PDOException $error){
-                    return "Error to consult posts: $error";
+                    return "Error to consult posts: ".$error->getMessage();
                 }
             }else{
-                return "Error to consult posts: Missing consult parameter passed";
+                return "Error to consult posts: Missing consult parameter";
             }
             
+        }
+
+        public function edit(){
+            try{
+                $this->conn = new Connection();
+                $sql = $this->conn->prepare("UPDATE ".$this::TABLE_NAME." set Titulo = ?, Categoria = ?, Data_Publicacao = ?, Conteudo = ?, Imagem = ? WHERE id = ?");
+                @$sql->bindParam(1, $this->getTitle(), PDO::PARAM_STR);
+                @$sql->bindParam(2, $this->getCategory(), PDO::PARAM_STR);
+                @$sql->bindParam(3, $this->getPublicationDate(), PDO::PARAM_STR);
+                @$sql->bindParam(4, $this->getContent(), PDO::PARAM_STR);
+                @$sql->bindParam(5, $this->getImage(), PDO::PARAM_STR);
+                @$sql->bindParam(6, $this->getId(), PDO::PARAM_STR);
+
+                if($sql->execute()){
+                    return true;
+                }else{
+                    return "Error to edit post: Execution failed";
+                }
+
+            }catch(PDOException $error){
+                return "Error to edit post: ".$error->getMessage();
+            }
         }
 
     }
