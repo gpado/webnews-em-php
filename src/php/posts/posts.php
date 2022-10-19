@@ -67,21 +67,53 @@
         public function submit(){
             try{
                 $this->conn = new Connection();
-                $sql = $this->conn->prepare("INSERT INTO posts VALUES (null,?,?,?,?,?)");    
-                @$sql->bindParam(1, $this->getTitle(), PDO::PARAM_STR);    
-                @$sql->bindParam(2, $this->getCategory(), PDO::PARAM_STR);    
-                @$sql->bindParam(3, $this->getPublicationDate(), PDO::PARAM_STR);    
-                @$sql->bindParam(4, $this->getContent(), PDO::PARAM_STR);    
-                @$sql->bindParam(5, $this->getImage(), PDO::PARAM_STR);    
+                $sql = $this->conn->prepare("INSERT INTO ".$this::TABLE_NAME." VALUES (null,?,?,?,?,?)");
+                @$sql->bindParam(1, $this->getTitle(), PDO::PARAM_STR);
+                @$sql->bindParam(2, $this->getCategory(), PDO::PARAM_STR);
+                @$sql->bindParam(3, $this->getPublicationDate(), PDO::PARAM_STR);
+                @$sql->bindParam(4, $this->getContent(), PDO::PARAM_STR);
+                @$sql->bindParam(5, $this->getImage(), PDO::PARAM_STR);
 
-                if($sql->execute()){        
+                if($sql->execute()){
                     return true;
-                }else{        
+                }else{
                     return "Error unknow to submit a new post";
                 }
             }catch(PDO_Exception $error){
                 return "Error to submit a new post: $error";
             }
         }
+
+        public function consult($postsToSelect){
+            if(isset($postsToSelect)){
+                try{
+                    $query = "SELECT * FROM ".$this::TABLE_NAME." ";
+
+                    if($postsToSelect != "*"){
+                        $postToSelectIndex = intval($postsToSelect);
+                        if(is_int($postToSelectIndex) && $postToSelectIndex > 0) $query .= "WHERE id = ".$postToSelectIndex;
+
+                        else return "Error to consult posts: Invalid consult parameter passed";
+                    }
+
+                    $this->conn = new Connection();
+                    $sql = $this->conn->prepare($query);
+
+                    if($sql->execute()){
+                        return $sql->fetchAll();
+                    }else{
+                        return "Error to consult posts: Execution vailed";
+                    }
+
+                }catch(PDOException $error){
+                    return "Error to consult posts: $error";
+                }
+            }else{
+                return "Error to consult posts: Missing consult parameter passed";
+            }
+            
+        }
+
     }
+
 ?>
