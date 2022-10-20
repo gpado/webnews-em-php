@@ -81,7 +81,7 @@
                 }else{
                     return "Error to submit a new post: Execution failed";
                 }
-            }catch(PDO_Exception $error){
+            }catch(PDOException $error){
                 return "Error to submit a new post: ".$error->getMessage();
             }
         }
