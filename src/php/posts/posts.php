@@ -136,6 +136,23 @@
             }
         }
 
-    }
+        public function delete(){
+            try{
+                $this->conn = new Connection();
+                $sql = $this->conn->prepare("DELETE FROM ".$this::TABLE_NAME." WHERE id = ?");
+                @$sql->bindParam(1, $this->getId(), PDO::PARAM_STR);
 
+                if($sql->execute()){
+                    return true;
+                }else{
+                    return "Error to delete post: Execution failed";
+                }
+
+            }catch(PDOException $error){
+                return "Error to delete post: ".$error->getMessage();
+            }
+        }
+
+    }
+    
 ?>
