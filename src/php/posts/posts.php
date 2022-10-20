@@ -1,7 +1,9 @@
 <?php
+    //Defining application right path
+    define("APP_ROOT", realpath(dirname(__FILE__)).'/');
 
     //Requiring Connection class
-    require_once("../connection.php");
+    require_once(APP_ROOT."../connection.php");
 
     class Posts{
 
@@ -154,5 +156,5 @@
         }
 
     }
-    
+
 ?>
