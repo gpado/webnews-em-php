@@ -14,9 +14,9 @@
 
     try{
         $conn = new Connection();
-        echo("Connection established!");
+        echo("<script>console.log('Connection established!')</script>");
 
     }catch(PDOException $error){
-        echo("Error to connect with the server - ".$error->getMessage());
+        return "Error to connect with the server - ".$error->getMessage();
     }
 ?>
