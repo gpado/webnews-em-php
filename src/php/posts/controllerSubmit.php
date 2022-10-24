@@ -19,7 +19,7 @@
 
             $wasPostSubmit = $this->posts->submit();
             if($wasPostSubmit){
-                echo("<script>alert('Notícia cadastrada com sucesso!');document.location='../../../nova_noticia.html'</script>");
+                echo("<script>alert('Notícia cadastrada com sucesso!');document.location='../../../admin/nova_noticia.html'</script>");
             }else{
                 echo("<script>alert('Erro ao cadastr notícia, tente novamente mais tarde.'); console.log(".$wasPostSubmit.");</script>");
             }
