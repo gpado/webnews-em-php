@@ -47,7 +47,7 @@
                     </thead>
                     <tbody id="TableData">
                       <?php 
-                        
+                        require_once("../src/php/posts/admin/controllerConsult.php");
                       ?>
                     </tbody>
                   </table>
