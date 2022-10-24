@@ -5,39 +5,78 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        
         <title>Nova Notícia</title>
     </head>
     <body>
-        <form method="POST" action="./src/php/posts/controllerSubmit.php" style="display: flex; flex-direction:column; max-width: 50%; margin:auto;">
-            <h3>Inserir nova Noticia</h3>
-    
-            <label for="txbTitle">Título da Noticia:</label>
-            <input type="text" name="txbTitle" id="txbTitle" data-is-value-valid="true" required>
-            <br>
-    
-            <label for="slctCategory">Categoria do Post</label>
-            <select name="slctCategory" id="slctCategory" data-is-value-valid="true" required>
-                <option value="Teste1">Teste1</option>
-                <option value="Teste2">Teste2</option>
-                <option value="Teste3">Teste3</option>
-                <option value="Teste4">Teste4</option>
-            </select>
-            <br>
-    
-            <label for="txbPublicationDate">Data de Publicação</label>
-            <input type="date" name="txbPublicationDate" id="txbPublicationDate" data-is-value-valid="true" required>
-            <br>
-    
-            <label for="txaContent">Conteúdo</label>
-            <textarea name="txaContent" id="txaContent" data-is-value-valid="true" required></textarea>
-            <br>
-    
-            <label for="txbImage">Imagem</label>
-            <input type="text" name="txbImage" id="txbImage" data-is-value-valid="true" required>
-            <br>
-            <br>
-    
-            <button type="submit">Enviar</button>
-        </form>
+        <header class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                <img src="src/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-3">
+                WebNews em PHP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="listar_noticias.html">Listar Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="nova_noticia.html">Nova Notícia</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container py-5">
+
+            <form method="POST" action="./src/php/posts/controllerSubmit.php" style="display: flex; flex-direction:column; max-width: 50%; margin:auto;">
+                <h2>Inserir nova Noticia</h2>
+        
+                <label class="form-label" for="txbTitle">Título da Noticia:</label>
+                <input class="form-control" type="text" name="txbTitle" id="txbTitle" data-is-value-valid="true" required>
+                <br>
+        
+                <label class="form-label" for="slctCategory">Categoria do Post</label>
+                <select class="form-control" name="slctCategory" id="slctCategory" data-is-value-valid="true" required>
+                    <option value="Teste1">Teste1</option>
+                    <option value="Teste2">Teste2</option>
+                    <option value="Teste3">Teste3</option>
+                    <option value="Teste4">Teste4</option>
+                </select>
+                <br>
+        
+                <label class="form-label" for="txbPublicationDate">Data de Publicação</label>
+                <input class="form-control" type="date" name="txbPublicationDate" id="txbPublicationDate" data-is-value-valid="true" required>
+                <br>
+        
+                <label class="form-label" for="txaContent">Conteúdo</label>
+                <textarea class="form-control" name="txaContent" id="txaContent" data-is-value-valid="true" required></textarea>
+                <br>
+        
+                <label class="form-label" for="txbImage">Imagem</label>
+                <input class="form-control" type="text" name="txbImage" id="txbImage" data-is-value-valid="true" required>
+                <br>
+                <br>
+        
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>    
+        </div>
+        <footer class="container-flex py-4 bg-dark text-light">
+            <div class="row d-flex justify-content-center">
+                <div class="col-5 text-center">
+                    <div>
+                        <h4>WebNews</h4>
+                        <img src="src/img/logo.png" alt="Logo" width="30" height="24">
+                    </div>
+                    <p>Av. Hill Valley nº1955</p>
+                </div>
+            </div>
+            
+        </footer>
     </body>
 </html>
