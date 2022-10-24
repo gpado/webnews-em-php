@@ -86,17 +86,26 @@
             }
         }
 
-        public function consult($postsToSelect){
+        public function consult($postsToSelect, $postId){
             if(isset($postsToSelect)){
                 try{
                     $query = "SELECT * FROM ".$this::TABLE_NAME." ";
 
-                    if($postsToSelect != "*"){
-                        $postToSelectIndex = intval($postsToSelect);
-                        if(is_int($postToSelectIndex) && $postToSelectIndex > 0) $query .= "WHERE id = ".$postToSelectIndex;
+                    switch($postsToSelect){
+                        case "ONE":
+                            $query .= "WHERE id = $postId";
+                            break;
+                       
+                        case "*":
+                            $query .= "ORDER BY Data_Publicacao DESC";
+                            break;
 
-                        else return "Error to consult posts: Invalid consult parameter passed";
+                        default:
+                            return "Error to consult posts: Invalid consult parameter passed";
+                            break;
                     }
+
+                    echo("Query<br>$query<hr>");
 
                     $this->conn = new Connection();
                     $sql = $this->conn->prepare($query);
