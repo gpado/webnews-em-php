@@ -1,0 +1,7 @@
+[data-is-value-valid="true"]{
+    border: 1px solid black;
+}
+
+[data-is-value-valid="false"]{
+    border: 1px solid red;
+}

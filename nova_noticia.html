@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Nova Notícia</title>
     </head>
     <body>
@@ -11,11 +12,11 @@
             <h3>Inserir nova Noticia</h3>
     
             <label for="txbTitle">Título da Noticia:</label>
-            <input type="text" name="txbTitle" id="txbTitle">
+            <input type="text" name="txbTitle" id="txbTitle" data-is-value-valid="true" required>
             <br>
     
             <label for="slctCategory">Categoria do Post</label>
-            <select name="slctCategory" id="slctCategory">
+            <select name="slctCategory" id="slctCategory" data-is-value-valid="true" required>
                 <option value="Teste1">Teste1</option>
                 <option value="Teste2">Teste2</option>
                 <option value="Teste3">Teste3</option>
@@ -24,15 +25,15 @@
             <br>
     
             <label for="txbPublicationDate">Data de Publicação</label>
-            <input type="date" name="txbPublicationDate" id="txbPublicationDate">
+            <input type="date" name="txbPublicationDate" id="txbPublicationDate" data-is-value-valid="true" required>
             <br>
     
             <label for="txaContent">Conteúdo</label>
-            <textarea name="txaContent" id="txaContent"></textarea>
+            <textarea name="txaContent" id="txaContent" data-is-value-valid="true" required></textarea>
             <br>
     
             <label for="txbImage">Imagem</label>
-            <input type="text" name="txbImage" id="txbImage">
+            <input type="text" name="txbImage" id="txbImage" data-is-value-valid="true" required>
             <br>
             <br>
     
