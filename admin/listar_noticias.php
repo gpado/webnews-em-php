@@ -66,5 +66,7 @@
             </div>
             
         </footer>
+
+        <script src="../src/js/confirmDeletion.js"></script>
     </body>
 </html>
