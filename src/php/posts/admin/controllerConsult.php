@@ -27,10 +27,10 @@
                         <td class="col-2"><?php echo $registryTitle ?></td>
                         <td class="col-2"><?php echo $registryCategory ?></td>
                         <td class="col-2">
-                            <a href="alterar_noticia.php?<?php echo $registryId ?>"><button class="btn btn-primary btn-ChangePost">Alterar</button></a>
+                            <a href="alterar_noticia.php?operation=getPostData&id=<?php echo $registryId ?>"><button class="btn btn-primary btn-ChangePost">Alterar</button></a>
                         </td>
                         <td class="col-2">
-                            <a href="excluir_noticia.php?<?php echo $registryId ?>"><button class="btn btn-danger btn-DeletePost">Excluir</button></a>
+                            <a href="excluir_noticia.php?operation=getPostData&id=<?php echo $registryId ?>"><button class="btn btn-danger btn-DeletePost">Excluir</button></a>
                         </td>
                     </tr>
                     <?php
