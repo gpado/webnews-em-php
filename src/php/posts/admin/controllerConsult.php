@@ -35,6 +35,13 @@
                     </tr>
                     <?php
                 }
+                if(!$areRegistries){
+                    ?>
+                    <tr>
+                        <td colspan="5" class="col-12">Nenhuma notícia cadastrada ainda, que tal <a href="./nova_noticia.html">Criar uma Nova Notícia</a>?</td>
+                    </tr>
+                    <?php
+                }
 
             }else{
                 echo("
