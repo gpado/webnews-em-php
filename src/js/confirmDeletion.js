@@ -8,7 +8,7 @@ const confirmDeletion = (tableRow) => {
 
     let deletePost = confirm(`Você realmente deseja apagar o post "${postData.title}" (id: ${postData.id})\nEsta ação não pode ser desfeita`);
     if(deletePost){
-        document.location = `./excluir_noticia.php?id=${postData.id}`;
+        document.location = `../src/php/posts/admin/controllerDelete.php?id=${postData.id}`;
     }
 }
 
