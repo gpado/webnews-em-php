@@ -8,7 +8,6 @@
         public function __construct(){
             $this->posts = new Posts();
             $this->operation = $_GET["operation"];
-            echo("<script>console.log('Operation - $this->operation')</script>");
 
             $this->execute();
         }
@@ -35,7 +34,6 @@
 
         public function getPostData(){
             $id = $_GET['id'];
-            echo("<script>console.log('Id - $id')</script>");
             
             $serverResponse = $this->posts->consult("ONE", $id, false);
             
