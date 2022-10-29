@@ -1,7 +1,19 @@
-[data-is-value-valid="true"]{
-    border: 1px solid black;
+body {
+  font-family: "Inter", sans-serif;
+
 }
 
-[data-is-value-valid="false"]{
-    border: 1px solid red;
+[data-is-value-valid="true"] {
+  border: 1px solid black;
+}
+
+[data-is-value-valid="false"] {
+  border: 1px solid red;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
