@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Out-2022 às 13:03
--- Versão do servidor: 5.7.17
--- PHP Version: 5.6.30
+-- Tempo de geração: 29-Out-2022 às 21:13
+-- Versão do servidor: 10.4.25-MariaDB
+-- versão do PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,10 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `webnews`
+-- Banco de dados: `webnews`
 --
-CREATE DATABASE IF NOT EXISTS `webnews` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `webnews`;
 
 -- --------------------------------------------------------
 
@@ -44,32 +41,30 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `Titulo`, `Categoria`, `Data_Publicacao`, `Conteudo`, `Imagem`) VALUES
-(60, 'RevisÃ£o de path', 'Teste3', '2022-01-01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ultricies dolor, sed vehicula ligula. Donec enim nulla, molestie eu purus et, rutrum varius mauris. Pellentesque non lacus quis velit bibendum pulvinar quis iaculis nibh. Donec in convallis nunc. Donec luctus nisi sed vulputate interdum. Sed hendrerit, lorem a molestie venenatis, quam magna placerat augue, ac vulputate velit metus quis nisi. Morbi nec molestie ante. Mauris metus libero, scelerisque nec lorem vitae, dignissim aliquet metus. Phasellus quis pulvinar leo, eu interdum nibh. Vivamus id ornare felis. Suspendisse vel libero tellus. In at interdum leo. Praesent tincidunt semper quam. Suspendisse accumsan dolor vitae gravida pellentesque.', 'teste/image.png'),
-(62, 'AnimaÃ§Ãµes de RespiraÃ§Ã£o', 'Teste3', '2020-03-14', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ultricies dolor, sed vehicula ligula. Donec enim nulla, molestie eu purus et, rutrum varius mauris. Pellentesque non lacus quis velit bibendum pulvinar quis iaculis nibh. Donec in convallis nunc. Donec luctus nisi sed vulputate interdum. Sed hendrerit, lorem a molestie venenatis, quam magna placerat augue, ac vulputate velit metus quis nisi. Morbi nec molestie ante. Mauris metus libero, scelerisque nec lorem vitae, dignissim aliquet metus. Phasellus quis pulvinar leo, eu interdum nibh. Vivamus id ornare felis. Suspendisse vel libero tellus. In at interdum leo. Praesent tincidunt semper quam. Suspendisse accumsan dolor vitae gravida pellentesque.', 'teste/image2.png'),
-(61, 'Teste 2037322.11', 'Teste4', '2022-01-02', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ultricies dolor, sed vehicula ligula. Donec enim nulla, molestie eu purus et, rutrum varius mauris. Pellentesque non lacus quis velit bibendum pulvinar quis iaculis nibh. Donec in convallis nunc. Donec luctus nisi sed vulputate interdum. Sed hendrerit, lorem a molestie venenatis, quam magna placerat augue, ac vulputate velit metus quis nisi. Morbi nec molestie ante. Mauris metus libero, scelerisque nec lorem vitae, dignissim aliquet metus. Phasellus quis pulvinar leo, eu interdum nibh. Vivamus id ornare felis. Suspendisse vel libero tellus. In at interdum leo. Praesent tincidunt semper quam. Suspendisse accumsan dolor vitae gravida pellentesque.', 'teste/image.png'),
-(59, 'NotÃ­cia Nova!', 'Teste3', '2021-12-23', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ultricies dolor, sed vehicula ligula. Donec enim nulla, molestie eu purus et, rutrum varius mauris. Pellentesque non lacus quis velit bibendum pulvinar quis iaculis nibh. Donec in convallis nunc. Donec luctus nisi sed vulputate interdum. Sed hendrerit, lorem a molestie venenatis, quam magna placerat augue, ac vulputate velit metus quis nisi. Morbi nec molestie ante. Mauris metus libero, scelerisque nec lorem vitae, dignissim aliquet metus. Phasellus quis pulvinar leo, eu interdum nibh. Vivamus id ornare felis. Suspendisse vel libero tellus. In at interdum leo. Praesent tincidunt semper quam. Suspendisse accumsan dolor vitae gravida pellentesque.', 'teste/image2.png'),
-(57, 'Nova AtualizaÃ§Ã£o - v.0.8.2', 'Teste2', '2021-12-12', 'Lorem ipsum sit amenooo, Lorem ipsum sit amenooo, Lorem ipsum sit amenooo, Lorem ipsum sit amenooo Lorem ipsum sit amenooo\r\nLorem ipsum sit amenooo', 'teste/image.png'),
-(58, 'Nova AtualizaÃ§Ã£o - v.0.8.3', 'Teste4', '2021-12-22', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ultricies dolor, sed vehicula ligula. Donec enim nulla, molestie eu purus et, rutrum varius mauris. Pellentesque non lacus quis velit bibendum pulvinar quis iaculis nibh. Donec in convallis nunc. Donec luctus nisi sed vulputate interdum. Sed hendrerit, lorem a molestie venenatis, quam magna placerat augue, ac vulputate velit metus quis nisi. Morbi nec molestie ante. Mauris metus libero, scelerisque nec lorem vitae, dignissim aliquet metus. Phasellus quis pulvinar leo, eu interdum nibh. Vivamus id ornare felis. Suspendisse vel libero tellus. In at interdum leo. Praesent tincidunt semper quam. Suspendisse accumsan dolor vitae gravida pellentesque.', 'teste/image2.png');
+(63, 'Tiroteio em Paraisópolis', 'Teste1', '2022-10-19', 'A princípio, ele usou a expressão “fomos atacados por criminosos”, mas, em seguida, afirmou que a motivação dos disparos não estava elucidada e que poderia se tratar de uma “questão', 'src/img/img1.jpg'),
+(64, 'BC divulga ranking dos 15 melhores', 'Teste2', '2022-10-29', 'A escolha da melhor instituição financeira deve levar em conta vários quesitos, como a satisfação dos clientes, o atendimento, a confiança, assessoria financeira e diversos outros.', 'src/img/img2.jpg'),
+(65, 'Piracicaba aponta falta de médicos', 'Teste3', '2022-10-29', 'A Prefeitura de Piracicaba (SP) anunciou nesta sexta-feira (28) a abertura de um edital para compra direta de plantões médicos para Urgência e Emergência na cidade. ', 'src/img/img3.jpg');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `posts`
+-- Índices para tabela `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT de tabela `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

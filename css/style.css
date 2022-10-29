@@ -1,6 +1,15 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
 body {
   font-family: "Inter", sans-serif;
-
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 [data-is-value-valid="true"] {
@@ -12,8 +21,16 @@ body {
 }
 
 
-footer{
+
+.footer {
   position: absolute;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  text-align: center;
+
+}
+
+main{
+  margin: 30px;
 }
