@@ -33,9 +33,11 @@
                                 Membro da Comunidade
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item active" href="index.php?category=a">Categoria 1</a></li>
-                                <li><a class="dropdown-item" href="index.php?category=a">Categoria 2</a></li>
-                                <li><a class="dropdown-item" href="index.php?category=a">Categoria 3</a></li>
+                                <li><a class="dropdown-item active" href="index.php?category=Planejamento">Planejamento</a></li>
+                                <li><a class="dropdown-item" href="index.php?category=Game%20Design">Game Design</a></li>
+                                <li><a class="dropdown-item" href="index.php?category=Desenvolvimento">Desenvolvimento</a></li>
+                                <li><a class="dropdown-item" href="index.php?category=Correção%20de%20Bugs">Correção de Bugs</a></li>
+                                <li><a class="dropdown-item" href="index.php?category=Outros">Outros</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

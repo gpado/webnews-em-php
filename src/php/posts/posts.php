@@ -95,7 +95,9 @@
                         case "ONE":
                             $query .= "WHERE id = $postId";
                             break;
-                       
+
+                        case "CATEGORY":
+                            $query .= "WHERE Categoria LIKE '".$this->getCategory()."' ";                       
                         case "*":
                             if($orderByData){
                                 $query .= "ORDER BY Data_Publicacao DESC";
@@ -108,7 +110,7 @@
                             return "Error to consult posts: Invalid consult parameter passed";
                             break;
                     }
-
+                    
                     $this->conn = new Connection();
                     $sql = $this->conn->prepare($query);
 
