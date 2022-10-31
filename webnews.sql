@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Out-2022 às 21:13
--- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 8.1.10
+-- Generation Time: 31-Out-2022 às 22:28
+-- Versão do servidor: 5.7.17
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `webnews`
+-- Database: `webnews`
 --
+CREATE DATABASE IF NOT EXISTS `webnews` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `webnews`;
 
 -- --------------------------------------------------------
 
@@ -41,30 +44,33 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `Titulo`, `Categoria`, `Data_Publicacao`, `Conteudo`, `Imagem`) VALUES
-(63, 'Tiroteio em Paraisópolis', 'Teste1', '2022-10-19', 'A princípio, ele usou a expressão “fomos atacados por criminosos”, mas, em seguida, afirmou que a motivação dos disparos não estava elucidada e que poderia se tratar de uma “questão', 'src/img/img1.jpg'),
-(64, 'BC divulga ranking dos 15 melhores', 'Teste2', '2022-10-29', 'A escolha da melhor instituição financeira deve levar em conta vários quesitos, como a satisfação dos clientes, o atendimento, a confiança, assessoria financeira e diversos outros.', 'src/img/img2.jpg'),
-(65, 'Piracicaba aponta falta de médicos', 'Teste3', '2022-10-29', 'A Prefeitura de Piracicaba (SP) anunciou nesta sexta-feira (28) a abertura de um edital para compra direta de plantões médicos para Urgência e Emergência na cidade. ', 'src/img/img3.jpg');
+(68, 'Sistemas de NÃ­veis', 'Game Design', '2022-06-11', ' Existem vÃ¡rias estruturas que tornam os jogos tÃ£o interessantes para o pÃºblico, e os sistemas de nÃ­veis sÃ£o um deles, tendo surgido primeiro nos RPGs, mas hoje estÃ¡ presente em toda a industria, porÃ©m pode se tornar uma grande fonte de ansiedade, por isso... ', 'src/img/game_design.jpg'),
+(69, 'Interface de RespiraÃ§Ã£o - Um desafio com Canvas', 'Desenvolvimento', '2022-09-30', '  Mauris nec purus ipsum. Pellentesque lacinia, sapien vel fermentum commodo, neque orci suscipit metus, at vulputate tortor est a dui. Ut ut nibh eu eros vehicula lobortis in ac tortor. Suspendisse eget sodales nunc. Vivamus accumsan id lacus et consequat. Morbi ut cursus justo. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. In blandit purus in nisl condimentum, sed varius dolor viverra. Vestibulum rhoncus ultrices neque, eu congue ipsum efficitur id. Morbi dictum dui arcu, a dignissim nulla hendrerit vel. Maecenas at iaculis mi, ut tempor est.  ', 'src/img/keyboard.jpg'),
+(70, 'Novo formulÃ¡rio de consulta', 'CorreÃ§Ã£o de Bugs', '2022-06-09', '  Mauris nec purus ipsum. Pellentesque lacinia, sapien vel fermentum commodo, neque orci suscipit metus, at vulputate tortor est a dui. Ut ut nibh eu eros vehicula lobortis in ac tortor. Suspendisse eget sodales nunc. Vivamus accumsan id lacus et consequat.  ', 'src/img/bug2.jpg'),
+(71, 'Parceria com a ONG Future Home', 'Outros', '2022-10-31', ' Ut ut nibh eu eros vehicula lobortis in ac tortor. Suspendisse eget sodales nunc. Vivamus accumsan id lacus et consequat. Morbi ut cursus justo. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. In blandit purus in nisl condimentum, sed varius dolor viverra. Vestibulum rhoncus ultrices neque, eu congue ipsum efficitur id. Morbi dictum dui arcu, a dignissim nulla hendrerit vel. Maecenas at iaculis mi, ut tempor est. ', 'src/img/kanban.jpg'),
+(72, 'AnimaÃ§Ãµes de RespiraÃ§Ã£o', 'Game Design', '2022-10-20', ' Pellentesque ex leo, iaculis quis laoreet nec, faucibus eget mi. Nullam elementum ligula eu dui vestibulum ultrices. Nunc vitae turpis pharetra, elementum dui eu, suscipit justo. ', 'src/img/game.jpg'),
+(73, 'Interface de UsuÃ¡rio', 'Desenvolvimento', '2022-08-09', 'Exemplo', 'src/img/code.jpg'),
+(63, 'Personagem - Guia de RespiraÃ§Ã£o', 'Planejamento', '2022-10-18', '  Qual a melhor forma de se ensinar alguÃ©m alguma coisa do que tendo outra \"pessoa\" para guiÃ¡-la sobre o que fazer ou nÃ£o? Pois foi pensando nisso que nÃ³s estamos planejando um personagem novo para o Breath, eprecisamos...  ', 'src/img/idea.jpg');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `posts`
+-- Indexes for table `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `posts`
+-- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
