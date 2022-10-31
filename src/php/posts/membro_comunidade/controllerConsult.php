@@ -10,13 +10,17 @@
         }
 
         public function execute(){
-            $category = $_GET['category'];
+            if(isset($_GET['category'])){
+                $category = $_GET['category'];
+            }else{
+                $category = "Planejamento";
+            }
             $isCategoryValid = $this->validateCategory($category);
             
             if($isCategoryValid){
                 $this->posts->setCategory($category);
                 $serverResponse = $this->posts->consult("CATEGORY", 0, true);
-
+    
                 $this->showData($serverResponse);
             }else{
                 echo("
