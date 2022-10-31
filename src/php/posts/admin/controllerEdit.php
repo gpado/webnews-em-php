@@ -55,7 +55,7 @@
                             <option disabled selected></option>
                             <option value="Planejamento">Planejamento</option>
                             <option value="Game Design">Game Design</option>
-                            <option value="Desenvolimento">Desenvolimento</option>
+                            <option value="Desenvolvimento">Desenvolvimento</option>
                             <option value="Correção de Bugs">Correção de Bugs</option>
                             <option value="Outros">Outros</option>
                         </select>
