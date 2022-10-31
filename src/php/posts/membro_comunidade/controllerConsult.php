@@ -52,10 +52,10 @@
 
 
                     echo("
-                        <div class='card mb-3' style='max-width: 540px'>
+                        <div class='card mb-3 col-7'>
                             <div class='row g-0'>
                                 <div class='col-md-4'>
-                                    <img src='" . $databaseRow['Imagem'] . "' class='img-fluid rounded-start' />
+                                    <img src='" . $databaseRow['Imagem'] . "' class='img-fluid rounded-start' style='max-height:fit-content' />
                                 </div>
                                 <div class='col-md-8'>
                                     <div class='card-body'>

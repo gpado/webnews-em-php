@@ -72,7 +72,29 @@
                         <br>
                 
                         <label class="form-label" for="txbImage">Imagem</label>
-                        <input class="form-control" type="text" name="txbImage" id="txbImage" data-is-value-valid="true" value='<?php echo $registry[5] ?>' required>
+                        <select
+                        class="form-control"
+                        name="txbImage"
+                        id="txbImage"
+                        data-is-value-valid="true"
+                        required
+                        >
+                        <option disabled selected></option>
+                        <option value="src/img/code.jpg">Code.jpg</option>
+                        <option value="src/img/idea.jpg">Idea.jpg</option>
+                        <option value="src/img/game.jpg">Game.jpg</option>
+                        <option value="src/img/game_design.jpg">Game_Design.jpg</option>
+                        <option value="src/img/people.jpg">People.jpg</option>
+                        <option value="src/img/bug1.jpg">Bug1.jpg</option>
+                        <option value="src/img/bug2.jpg">Bug2.jpg</option>
+                        <option value="src/img/puzzle.jpg">Puzzle.jpg</option>
+                        <option value="src/img/kanban.jpg">Kanban.jpg</option>
+                        <option value="src/img/keyboard.jpg">Keyboard.jpg</option>
+
+                        </select>
+
+                        <script> document.frmEditPost.txbImage.value = '<?php echo $registry[5] ?>' </script>
+
                         <br>
                         <br>
 

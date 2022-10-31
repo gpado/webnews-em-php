@@ -27,7 +27,7 @@
                     $areRegistries = true;
 
                     echo("
-                        <div class='card mb-3' style='max-width: 540px'>
+                        <div class='card mb-3 col-7'>
                             <div class='card-body'>
                                 <h5 class='card-title'>" . $databaseRow['Titulo'] . "</h5>
                                 <p class='card-text'>" . $databaseRow['Conteudo'] . "</p>
