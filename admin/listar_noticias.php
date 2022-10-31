@@ -12,24 +12,40 @@
     </head>
     <body>
         <header class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                <img src="../src/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-3">
-                WebNews em PHP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="listar_noticias.php">Listar Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="nova_noticia.html">Nova Notícia</a>
-                    </li>
-                </ul>
-                </div>
+          <div class="container-fluid">
+              <a class="navbar-brand">
+                  <img src="../src/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-3" />
+                  WebNews em PHP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Membro da Comunidade
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="../index.php?category=a">Categoria 1</a></li>
+                              <li><a class="dropdown-item" href="../index.php?category=a">Categoria 2</a></li>
+                              <li><a class="dropdown-item" href="../index.php?category=a">Categoria 3</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item active dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Administrador
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li class="nav-item">
+                                  <a class="dropdown-item active" href="listar_noticias.php">Listagem de Notícias</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="dropdown-item" href="nova_noticia.html">Cadastro de Notícias</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
             </div>
         </header>
         <div class="container py-5">
@@ -61,19 +77,21 @@
 
 
         
-        <footer class="container-flex py-4 bg-dark text-light">
-            <div class="row d-flex justify-content-center">
-                <div class="col-5 text-center">
-                    <div>
-                        <h4>WebNews</h4>
-                        <img src="../src/img/logo.png" alt="Logo" width="30" height="24">
-                    </div>
-                    <p>Av. Hill Valley nº1955</p>
-                </div>
+        <footer class="rodape">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 bg-light mt-4">
+            ©
+            <script language="javascript" type="text/javascript">
+                now = new Date();
+                document.write(now.getFullYear());
+            </script>
+            Copyright:
+            <a href="#"> Alunos da FIAP</a>
             </div>
-            
+            <!-- Copyright -->
         </footer>
 
         <script src="../src/js/confirmDeletion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
 </html>
