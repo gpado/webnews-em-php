@@ -92,23 +92,30 @@
                     $query = "SELECT * FROM ".$this::TABLE_NAME." ";
 
                     switch($postsToSelect){
+                        case "*":
+                            break;
+                            
                         case "ONE":
-                            $query .= "WHERE id = $postId";
+                            $query .= "WHERE id = $postId ";
                             break;
 
                         case "CATEGORY":
-                            $query .= "WHERE Categoria LIKE '".$this->getCategory()."' ";                       
-                        case "*":
-                            if($orderByData){
-                                $query .= "ORDER BY Data_Publicacao DESC";
-                            }else{
-                                $query .= "ORDER BY id";
-                            }
+                            $query .= "WHERE Categoria LIKE '".$this->getCategory()."' ";
+                            break;
+                            
+                        case "TITLE":
+                            $query .= "WHERE Titulo LIKE '%".$this->getTitle()."%' ";
                             break;
 
                         default:
                             return "Error to consult posts: Invalid consult parameter passed";
                             break;
+                    }
+
+                    if($orderByData){
+                        $query .= "ORDER BY Data_Publicacao DESC";
+                    }else{
+                        $query .= "ORDER BY id";
                     }
                     
                     $this->conn = new Connection();
